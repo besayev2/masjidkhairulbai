@@ -1,0 +1,220 @@
+/* CSS untuk Panel Admin (Backend) - Tema Modern & Clean */
+/* Desain oleh Gemini - Google AI */
+
+/* --- Import Font & Variabel --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+:root {
+    --primary-color: #007bff;
+    --dark-text: #212529;
+    --light-text: #6c757d;
+    --background-color: #f8f9fa; /* Abu sangat terang */
+    --white-color: #ffffff;
+    --border-color: #dee2e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--dark-text);
+    display: flex;
+}
+
+/* --- Sidebar --- */
+.sidebar {
+    width: 250px;
+    background-color: var(--white-color);
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    border-right: 1px solid var(--border-color);
+}
+.sidebar h2 {
+    color: var(--dark-text);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.sidebar-menu ul { list-style: none; }
+.sidebar-menu li a {
+    display: block;
+    color: var(--light-text);
+    padding: 12px 15px;
+    text-decoration: none;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.sidebar-menu li a:hover {
+    background-color: var(--background-color);
+    color: var(--dark-text);
+}
+.sidebar-menu li a.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+.sidebar-menu .logout {
+    position: absolute;
+    bottom: 20px;
+    width: calc(100% - 40px);
+}
+.sidebar-menu .logout a {
+    background-color: #f1f3f5;
+    color: #dc3545;
+    text-align: center;
+}
+.sidebar-menu .logout a:hover {
+    background-color: #dc3545;
+    color: var(--white-color);
+}
+
+/* --- Main Content --- */
+.main-content {
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px);
+}
+.main-content h1 {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--dark-text);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+.card {
+    background-color: var(--white-color);
+    padding: 25px;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+/* --- Tabel --- */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+.data-table th, .data-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+    vertical-align: middle;
+}
+.data-table thead th {
+    background-color: var(--background-color);
+    color: var(--dark-text);
+    font-weight: 500;
+    border-bottom-width: 2px;
+}
+.data-table tbody tr:hover {
+    background-color: var(--background-color);
+}
+.action-btn {
+    padding: 6px 12px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+    font-size: 0.9em;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+.action-btn:hover { opacity: 0.8; }
+.btn-edit { background-color: #007bff; }
+.btn-delete { background-color: #dc3545; }
+.btn-add {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: 500;
+    border-radius: 6px;
+    text-decoration: none;
+    margin-bottom: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-add:hover {
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+/* --- Form --- */
+.form-group { margin-bottom: 20px; }
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--dark-text);
+    font-weight: 500;
+}
+.form-control {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--dark-text);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+.form-control:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* --- GAYA UNTUK TOMBOL LOGIN DI HEADER --- */
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    gap: 25px; /* Jarak antara menu dan tombol */
+}
+
+.btn-login {
+    background-color: #28a745; /* Warna hijau seperti contoh */
+    color: #ffffff;
+    padding: 8px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    white-space: nowrap; /* Mencegah teks turun baris */
+}
+
+.btn-login:hover {
+    background-color: #218838; /* Warna hijau lebih gelap saat hover */
+    transform: translateY(-2px);
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* Penyesuaian untuk Tampilan Mobile */
+@media (max-width: 768px) {
+    .nav-container {
+        /* Di mobile, container ini tidak lagi dibutuhkan karena menu dan tombol akan diatur oleh JS */
+        display: none; 
+    }
+
+    /* Saat menu mobile aktif, kita atur ulang */
+    .nav-menu.active {
+        display: block; /* Pastikan menu muncul */
+    }
+}
